@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Daily_Siva</title>
+
+    <script src="https://kit.fontawesome.com/9dd6200581.js" crossorigin="anonymous"></script>
+
+    <script src="https://kit.fontawesome.com/9dd6200581.js" crossorigin="anonymous"></script>
+
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+
+        .image img{
+            width: 100px;
+            height: 100px;
+            margin: 27px 20px;
+        }
+
+        .nav{
+            display: flex;
+            justify-content: space-between;
+            animation: header ease-in-out 1s;
+            height: 100%;
+            width: 100%;
+            position: sticky;
+            top: 50px;
+
+        }
+
+        @keyframes header{
+            0%{
+                opacity: 0%;
+                transform: translateY(100%);
+            }
+        }
+
+        .nav-list{
+            display: flex;
+            justify-content: space-between;
+            margin: 30px 20px;
+            height: 12%;
+            letter-spacing: 2px;
+        }
+
+        .nav li::after{
+            content: '';
+            display: block;
+            background-color: orangered ;
+            height: 2px;
+            transform: scaleX(0) ;
+            transition: transform 300ms;
+        }
+
+        .nav li:hover::after{
+            transform: scaleX(1);
+        }
+
+        a{
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bolder;
+            color: white;
+        }
+        
+        a:hover{
+            color: rgb(255, 0, 85);
+        }
+
+        li{
+            margin: 30px 30px;
+            list-style-type: none;
+        }
+
+        header{
+            background-image: url(https://wallpaperaccess.com/full/2454628.png);
+            background-size: cover;
+            height: 100vh;
+            position: relative;
+        }
+
+        .text{
+            color: white;
+            font-family: 'Ubuntu', sans-serif;
+            margin: 3% 10%;
+            margin-top: 5%;
+
+        }
+
+        h1{
+            /*font-family: 'Lobster', cursive;*/
+            font-size: 40px;
+            margin-bottom: 3%;
+            margin-left: 4%;
+        }
+
+        h3{
+            margin-left: -4%;
+            letter-spacing: 1px;
+            word-spacing: 2px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: gray;
+        }
+
+        .btn{
+            display: inline-block;
+            margin: 5% 1.5%;
+            padding: 13px 30px;
+            border-radius: 6px;
+            background: none;
+            font-size: 15px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .btn:hover{
+            background-color: chartreuse;
+            color: red;
+            transform: translateY(3px);
+            transition: 500ms;
+        }
+
+        h3{
+            margin-left: -6.5%;
+        }
+        
+        .burger{
+            color: white;
+            margin-top: 5%;
+            font-size: 20px;
+            margin-left: 10px;
+            display: none;
+            margin-top: 1.2%;
+        }
+
+        @media screen and (max-width:750px){
+        .nav-list{
+        flex-direction:column;
+        position:absolute;
+        background-color: rgb(123, 119, 119);
+        width: 0%;
+        right: -10rem;
+        top: 12vh;
+        height: 70vh;
+        transition: 500ms;
+        }
+
+        .burger{
+        color: white;
+        font-size: 20px;
+        margin: 60px 60px;
+        font-size: 30px;
+        display: block;
+        }
+
+        .header-content{
+        color: blueviolet;
+        }
+
+        .text{
+            text-align: center;
+            margin-top: 15%;
+        }
+        .fail{
+            font-size: 15px;
+            margin: 8% auto;
+        }
+        }
+
+        .nav-show{
+            width: 100%;
+            text-align: center;
+            margin-right: 20%;
+        }
+
+        .text-show{
+            display: none;
+        }
+
+         /* ---------- About Section ----------- */
+
+         .about-content{
+             display: flex;
+             justify-content: space-between;
+         }
+         .titles{
+             text-align: center;
+             font-size: 40px;
+             margin: 50px;
+             font-weight: bolder;
+         }
+         .column-left{
+             width: 45%;
+         }
+         .column-left img{
+             height: 300px;
+             width: 350px;
+             margin-left: 150px;
+             border-radius: 0px 15px 0px 15px;
+         }
+         .column-right{
+             width: 55%;
+         }
+         .column-right p{
+             text-align: justify;
+             margin-right: 100px;
+             font-size: 20px;
+             font-weight: 400;
+         }
+         .texts{
+             font-size: 30px;
+             margin-bottom: 30px;
+         }
+         .texts span{
+             font-size: 35px;
+             color: crimson;
+         }
+         .btns button{
+             background: crimson;
+             padding: 10px 20px;
+             font-size: 15px;
+             font-weight: bolder;
+             border-radius: 5px;
+             margin: 25px 0px;
+         }
+         .btns button:hover{
+             background: transparent;
+             color: crimson;
+             transform: translateY(4px);
+             transition: transform 300ms;
+         }
+         .social a{
+             color: black;
+             font-weight: bolder;
+             font-size: 30px;
+         }
+         .social a:hover{
+             color: crimson;
+         }
+         .profile{
+             display: flex;
+         }
+         .social{
+             display: flex;
+             margin-left: 10px;
+         }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="header-content">
+
+            <div class="nav">
+                <div class="image">
+                    <img src="https://t3.ftcdn.net/jpg/03/30/89/62/240_F_330896211_8Aj6hrA9lY7haKnOFLQyzLoEgztaqydp.jpg" alt="Daily_Siva">
+                </div>
+    
+                <ul class="nav-list">
+                    <li ><a href="">HOME</a></li>
+                    <li><a href="">ABOUT</a></li>
+                    <li><a href="">SUPPORT</a></li>
+                    <li><a href="">LOGIN</a></li>
+                </ul>
+
+                <div class="burger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+
+            <div class="text">
+                <h1>DAILY_SIVA</h1>
+                <h3 class="fail">FAILURE IS THE FIRST STEP TO SUCCESS</h3>
+                <button class="btn">
+                    ENROLL
+                </button>
+    
+                <button class="btn">
+                    LOGIN
+                </button>
+            </div>
+        </div>
+
+    </header>
+
+    <section class="about" id="about">
+            <h4 class="titles">About me</h4>
+            <div class="about-content">
+                <div class="column-left">
+                    <img src="https://mumbaimirror.indiatimes.com/photo/71943344.cms" alt="">
+                </div>
+                <div class="column-right">
+                    <div class="texts">My name is Siva and I'm a <span>Front-End Developer</span></div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro culpa voluptates ab molestias corporis? Quaerat fugit officiis accusantium hic obcaecati, possimus impedit ducimus molestiae aut quis, perferendis, tempore esse facilis doloribus? Autem, porro nesciunt id deleniti, labore laborum eum quam soluta voluptatem cum maxime ducimus. Adipisci praesentium exercitationem blanditiis harum iste rem rerum eaque, accusamus et eveniet pariatur nobis culpa hic ad reiciendis ea quaerat velit! Deserunt, autem nulla! Magnam ipsum ad fugiat quo iste quasi, veniam inventore quibusdam provident!</p>
+                    <div class="profile">
+                        <div class="btns">
+                            <button>Download CV</button>
+                        </div>
+                        <ul class="social">
+                            <li><a href="https://www.facebook.com/dailysiva" target="blank"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="https://www.instagram.com/siva_shark_007/" target="blank"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="https://wa.me/919786960343" target="blank"><i class="fab fa-whatsapp"></i></a></li>
+                            <li><a href="sivasank999@gmail.com" target="blank"><i class="far fa-envelope"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    </section>
+    
+</body>
+
+</html>
